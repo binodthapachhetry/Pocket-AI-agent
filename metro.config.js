@@ -10,6 +10,7 @@ const config = {
     //nodeModulesPaths: [...localPackagePaths], // update to resolver
     assetExts: assetExts.filter(ext => ext !== 'svg'),
     sourceExts: [...sourceExts, 'svg'],
+    silenceWarnings: true, // Silence Metro bundler warnings
   },
   transformer: {
     babelTransformerPath: require.resolve(
