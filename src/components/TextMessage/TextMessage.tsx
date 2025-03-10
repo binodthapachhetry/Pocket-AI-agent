@@ -126,14 +126,6 @@ export const TextMessage = ({
     );
   };
 
-  const renderTimestamp = () => {
-    const timestamp = message.createdAt || Date.now();
-    return (
-      <Text style={styles({message, theme, user}).timestampText}>
-        {dayjs(timestamp).format('HH:mm')}
-      </Text>
-    );
-  };
 
   return usePreviewData &&
     !!onPreviewDataFetched &&
@@ -169,7 +161,6 @@ export const TextMessage = ({
         maxMessageWidth={messageWidth}
         selectable={false}
       />
-      {renderTimestamp()}
 
       {/*Platform.OS === 'ios' ? (
         <TextInput

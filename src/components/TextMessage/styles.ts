@@ -43,11 +43,4 @@ export const styles = ({
       padding: 8,
       borderRadius: theme.borders.messageBorderRadius,
     },
-    timestampText: {
-      fontSize: 10,
-      color: theme.colors.onSurfaceVariant,
-      alignSelf: user?.id === message.author.id ? 'flex-end' : 'flex-start',
-      marginTop: 4,
-      opacity: 0.7,
-    },
   });
