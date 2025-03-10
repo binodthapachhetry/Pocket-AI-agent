@@ -161,24 +161,6 @@ export const TextMessage = ({
         maxMessageWidth={messageWidth}
         selectable={false}
       />
-
-      {/*Platform.OS === 'ios' ? (
-        <TextInput
-          multiline
-          editable={false}
-          style={[
-            text,
-            {
-              lineHeight: undefined,
-            },
-          ]}>
-          {message.text.trim()}
-        </TextInput>
-      ) : (
-        <Text selectable={true} style={text}>
-          {message.text}
-        </Text>
-      )*/}
     </View>
   );
 };
