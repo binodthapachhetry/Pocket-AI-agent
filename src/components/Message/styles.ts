@@ -28,8 +28,8 @@ const styles = ({
     contentContainer: {
       backgroundColor:
         !currentUserIsAuthor || message.type === 'image'
-          ? theme.colors.secondary
-          : theme.colors.primary,
+          ? theme.colors.surfaceContainerLow
+          : theme.colors.surfaceContainerHigh,
       borderBottomLeftRadius:
         currentUserIsAuthor || roundBorder
           ? theme.borders.messageBorderRadius
@@ -39,7 +39,8 @@ const styles = ({
           ? theme.borders.messageBorderRadius
           : 0
         : theme.borders.messageBorderRadius,
-      borderColor: 'transparent',
+      borderColor: theme.colors.surfaceContainerHighest,
+      borderWidth: 1,
       borderRadius: theme.borders.messageBorderRadius,
       overflow: 'hidden',
     },

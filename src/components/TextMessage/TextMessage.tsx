@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {Linking, Text, View} from 'react-native';
+import dayjs from 'dayjs';
 
 import ParsedText from 'react-native-parsed-text';
 import {
@@ -125,6 +126,15 @@ export const TextMessage = ({
     );
   };
 
+  const renderTimestamp = () => {
+    const timestamp = message.createdAt || Date.now();
+    return (
+      <Text style={styles({message, theme, user}).timestampText}>
+        {dayjs(timestamp).format('HH:mm')}
+      </Text>
+    );
+  };
+
   return usePreviewData &&
     !!onPreviewDataFetched &&
     REGEX_LINK.test(message.text.toLowerCase()) ? (
@@ -159,6 +169,7 @@ export const TextMessage = ({
         maxMessageWidth={messageWidth}
         selectable={false}
       />
+      {renderTimestamp()}
 
       {/*Platform.OS === 'ios' ? (
         <TextInput
