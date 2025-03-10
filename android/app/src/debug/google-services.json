@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "526296288233",
+    "project_id": "pocket-ai-agent",
+    "storage_bucket": "pocket-ai-agent.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526296288233:android:6a01259c93bce416a19978",
+        "android_client_info": {
+          "package_name": "com.pocketpalai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtm67NMKHHcNXJhtmyYabVNji3YkuMm-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

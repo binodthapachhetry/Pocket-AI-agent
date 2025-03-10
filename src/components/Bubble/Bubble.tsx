@@ -60,19 +60,21 @@ export const Bubble = ({
         contentContainer,
         {
           transform: [{scale}],
+          backgroundColor: currentUserIsAuthor                                                                                  
+          ? '#F5F5F5' // Light gray for user messages                                                                         
+          : '#E1F5FE', // Light blue for AI messages  
         },
       ]}>
       {child}
-      {timings && (
+      {/* {timings && ( */}
+        {copyable && (
         <View style={dateHeaderContainer}>
-          {copyable && (
             <TouchableOpacity onPress={copyToClipboard}>
               <Icon name="content-copy" style={iconContainer} />
             </TouchableOpacity>
+          </View> 
           )}
-          {timings && <Text style={dateHeader}>{timingsString}</Text>}
-        </View>
-      )}
+          {/* {timings && <Text style={dateHeader}>{timingsString}</Text>} */}
     </Animated.View>
   );
 };
