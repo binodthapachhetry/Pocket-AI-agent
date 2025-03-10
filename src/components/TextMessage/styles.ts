@@ -42,5 +42,7 @@ export const styles = ({
       marginVertical: theme.insets.messageInsetsVertical,
       padding: 8,
       borderRadius: theme.borders.messageBorderRadius,
+      // Make sure background is transparent to let parent background show through
+      backgroundColor: 'transparent',
     },
   });

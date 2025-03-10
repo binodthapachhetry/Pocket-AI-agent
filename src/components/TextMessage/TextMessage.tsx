@@ -161,6 +161,7 @@ export const TextMessage = ({
         maxMessageWidth={messageWidth}
         selectable={false}
       />
+      {/* Remove any token/time metrics that might be added here */}
     </View>
   );
 };

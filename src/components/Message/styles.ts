@@ -43,6 +43,10 @@ const styles = ({
       borderColor: '#E0E0E0',
       borderRadius: theme.borders.messageBorderRadius,
       overflow: 'hidden',
+      // Add elevation for Android to ensure the style takes precedence
+      elevation: 1,
+      // Ensure zIndex is set for iOS
+      zIndex: 1,
     },
     dateHeader: {
       alignItems: 'center',
