@@ -28,8 +28,8 @@ const styles = ({
     contentContainer: {
       backgroundColor:
         !currentUserIsAuthor || message.type === 'image'
-          ? theme.colors.surfaceContainerLow
-          : theme.colors.surfaceContainerHigh,
+          ? '#E1F5FE' // Light blue for AI messages
+          : '#F5F5F5', // Light gray for user messages
       borderBottomLeftRadius:
         currentUserIsAuthor || roundBorder
           ? theme.borders.messageBorderRadius
@@ -39,8 +39,8 @@ const styles = ({
           ? theme.borders.messageBorderRadius
           : 0
         : theme.borders.messageBorderRadius,
-      borderColor: theme.colors.surfaceContainerHighest,
       borderWidth: 1,
+      borderColor: '#E0E0E0',
       borderRadius: theme.borders.messageBorderRadius,
       overflow: 'hidden',
     },
